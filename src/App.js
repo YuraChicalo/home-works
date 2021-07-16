@@ -12,7 +12,6 @@ function App() {
   let [moreDetails, setMoreDetails] = useState([])
   useEffect(()=>{
     getPosts().then(value => {
-      console.log(value.data)
       setPosts(value.data)
     })
   },[])
