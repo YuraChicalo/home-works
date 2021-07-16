@@ -1,23 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import Menu from "./components/menu/Menu";
+import General from "./components/generel/Generel";
+
+
+
+
+
+let simpsons = [
+  {
+    name: 'yura',
+    surname: 'chicalo',
+    age: 20,
+    city: 'Lviv'
+  },
+  {
+    name: 'ivan',
+    surname: 'chicalo',
+    age: 21,
+    city: 'Lviv'
+  },
+  {
+    name: 'stepan',
+    surname: 'chicalo',
+    age: 22,
+    city: 'Lviv'
+  }
+]
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Menu/>
+      <General items = {simpsons}/>
     </div>
   );
 }

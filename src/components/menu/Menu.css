@@ -1,0 +1,7 @@
+.menu{
+    height: 50px;
+    background: silver;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
