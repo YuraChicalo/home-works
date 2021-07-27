@@ -21,21 +21,6 @@ function reducer(state = initialValue, action) {
         case 'GET_USERS': {
             return {...state, users: action.payload}
         }
-        case 'GET_POSTS': {
-            return {...state, posts: action.payload}
-        }
-        case 'GET_COMMENTS': {
-            return {...state, comments: action.payload}
-        }
-        case 'GET_ALBUMS': {
-            return {...state, albums: action.payload}
-        }
-        case 'GET_PHOTOS': {
-            return {...state, photos: action.payload}
-        }
-        case 'GET_TODOS': {
-            return {...state, todos: action.payload}
-        }
         default:
             return {...state}
     }
