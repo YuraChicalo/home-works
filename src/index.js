@@ -8,12 +8,7 @@ import {createStore} from "redux";
 import {Provider} from "react-redux";
 
 const initialValue = {
-    users: [],
-    posts: [],
-    comments: [],
-    albums: [],
-    photos: [],
-    todos: [],
+    users: []
 }
 
 function reducer(state = initialValue, action) {
