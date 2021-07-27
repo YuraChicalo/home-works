@@ -4,9 +4,50 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import {createStore} from "redux";
+import {Provider} from "react-redux";
+
+const initialValue = {
+    users: [],
+    posts: [],
+    comments: [],
+    albums: [],
+    photos: [],
+    todos: [],
+}
+
+function reducer(state = initialValue, action) {
+    switch (action.type) {
+        case 'GET_USERS': {
+            return {...state, users: action.payload}
+        }
+        case 'GET_POSTS': {
+            return {...state, posts: action.payload}
+        }
+        case 'GET_COMMENTS': {
+            return {...state, comments: action.payload}
+        }
+        case 'GET_ALBUMS': {
+            return {...state, albums: action.payload}
+        }
+        case 'GET_PHOTOS': {
+            return {...state, photos: action.payload}
+        }
+        case 'GET_TODOS': {
+            return {...state, todos: action.payload}
+        }
+        default:
+            return {...state}
+    }
+}
+
+const store = createStore(reducer)
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+        <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
